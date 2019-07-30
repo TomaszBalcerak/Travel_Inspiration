@@ -1,0 +1,174 @@
+* {
+margin: 0;
+padding: 0;
+border: 0;
+box-sizing:border-box;
+}
+body{
+	background:cover;
+	font-family: 'Lato', sans-serif;
+	overflow-x:hidden;
+	background-image:url(img/pattern3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width:100%;
+}
+a:link 
+{
+    color: #fff;
+	text-decoration: none;
+}
+a:visited 
+{
+    color: #fff;
+}
+a:hover 
+{
+    color: #fff;
+}
+a:active 
+{    
+	color: #fff;
+}
+.container{
+	text-align:center;
+	margin-left:3px;
+	margin-right:3px;
+	width:100vw;
+}
+#art{
+	margin-right:25px;
+	opacity:0;
+	display:block;
+	transition:opacity 0.4s ease-in-out;
+	animation:sca 2s;
+}
+@keyframes sca{
+	0%{transform:scale(0.5);}
+	100%{transform:scale(1.0);}
+}
+article p{
+	font-size:20px;
+}
+p{
+	font-size:20px;
+	text-align: justify;
+	display:inline-block;
+	margin:20px 20px;
+	font-weight: bold;
+	color:#fff;
+}
+ul{
+	list-style-type: none;
+}
+li{
+	text-align: justify;
+	margin: 15px 30px;
+	color:#fff;
+}
+li:last-child{
+	padding-bottom:20px;
+}
+.card
+{
+	display: inline-block;
+	width: 330px;
+	height:330px;
+	text-align: center;
+	margin-top:10px;
+	margin-left: 20px;
+	margin-right:20px;
+}
+.panels{
+	width:330px;
+	overflow: hidden;
+}
+.overlay{
+  position:relative; /*zmiana układu odniesienia*/
+  width:330px;
+  height:330px;
+  border:1px solid black;
+  cursor:pointer;
+ }
+.overlay img{
+	width:100%;
+	height:100%;
+	transition: all 0.5s ease-in-out;
+}
+.overlay img:hover{
+	-webkit-transform:scale(1.15);
+  -ms-transform:scale(1.15)
+  transform:scale(1.15)
+}
+.overlay .link{
+  position:absolute; /*odnosi się do relativa a nie do góry strony*/
+  display:block;
+  width:330px;
+  height:65px;
+  background-color: #111;
+  left:0px;
+  bottom:0px;
+  opacity:0.9; /*bo napis ma być niewidoczny- widoczny dopiero w hoverze*/
+  transition: opacity 0.5s ease-in-out;
+}
+.overlay:hover .link{
+  opacity:0.9;
+  color:white;
+}
+footer{
+	background-color:#28292b;
+	color:white;
+	padding:2px;
+	text-align:center;
+	opacity:0.9;
+	height:35px;
+	font-size:12px;
+	margin-top:20px;
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+@media (min-width:600px) {
+p{
+	font-size:17px;
+	text-align: justify;
+	display:inline-block;
+	margin:15px 30px;
+	font-weight: bold;
+	color:#fff;
+}
+	li{
+		font-size:17px;
+		margin:15px 40px;
+	}
+	.card{
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+	}
+	footer{
+		margin-top:20px;
+		font-size:15px;
+		height:60px;
+		line-height: 60px;
+	}
+}
+@media (min-width:1050px) {
+		li{
+		font-size:17px;
+	}
+	.card{
+		display:inline-block;
+	}
+	.overlay .link{
+  opacity:0; /*bo napis ma być niewidoczny- widoczny dopiero w hoverze*/
+  transition: opacity 0.5s ease-in-out;
+}
+.overlay:hover .link{
+  opacity:0.9;
+  color:white;
+}
+	footer{
+		width:100%;
+	}
